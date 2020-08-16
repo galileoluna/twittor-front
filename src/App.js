@@ -1,5 +1,8 @@
 import React, {useState} from 'react';
+import {Button, Alert} from "react-bootstrap";
 
+
+import SignInSingUp from './page/SignInSingUp';
 
 
 export default function App() {
@@ -10,11 +13,11 @@ export default function App() {
 
 
 //verifico que el useState tenga algun valor
-  return (
+  return (<div>{user ? (
     <div>
-      {user ? (<h1>Estas Logueado</h1>): (<h1>No estas Logueado</h1>)}
+      <SignInSingUp />
     </div>
-  )
+  ): (<h1>No estas Logueado</h1>)}</div>)
 //cuando usuario tenga contenido
 
 
